@@ -20,4 +20,11 @@ form.addEventListener("submit", (event) => {
   } else {
     result.innerText = divisionResult;
   }
+
+  // Scenario: Validation when values are missing
+  if (!dividend || !divider) {
+    result.innerText =
+      "Division not performed. Both values are required in inputs. Try again";
+    return; // Exit the function early
+  }
 });
