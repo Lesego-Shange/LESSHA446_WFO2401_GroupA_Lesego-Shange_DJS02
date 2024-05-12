@@ -10,4 +10,7 @@ form.addEventListener("submit", (event) => {
   // Convert inputs to numbers
   const dividendNum = parseFloat(dividend);
   const dividerNum = parseFloat(divider);
+
+  // Perform division
+  const divisionResult = dividendNum / dividerNum;
 });
