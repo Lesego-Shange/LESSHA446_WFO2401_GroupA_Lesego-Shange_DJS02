@@ -27,4 +27,12 @@ form.addEventListener("submit", (event) => {
       "Division not performed. Both values are required in inputs. Try again";
     return; // Exit the function early
   }
+
+  // Scenario: An invalid division should log an error in the console
+  if (dividerNum === 0) {
+    result.innerText =
+      "Division not performed. Invalid number provided. Try again";
+    console.error("Division by zero error.");
+    return; // Exit the function early
+  }
 });
