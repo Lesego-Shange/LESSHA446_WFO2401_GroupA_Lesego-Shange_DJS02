@@ -35,4 +35,11 @@ form.addEventListener("submit", (event) => {
     console.error("Division by zero error.");
     return; // Exit the function early
   }
+
+  // Scenario: Providing anything that is not a number should crash the program
+  if (isNaN(dividendNum) || isNaN(dividerNum)) {
+    result.innerText = "Something critical went wrong. Please reload the page";
+    console.error("Invalid input. Please enter valid numbers.");
+    return; // Exit the function early
+  }
 });
