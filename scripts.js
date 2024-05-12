@@ -13,4 +13,11 @@ form.addEventListener("submit", (event) => {
 
   // Perform division
   const divisionResult = dividendNum / dividerNum;
+
+  // Scenario: Dividing numbers result in a decimal number
+  if (!Number.isInteger(divisionResult)) {
+    result.innerText = Math.floor(divisionResult);
+  } else {
+    result.innerText = divisionResult;
+  }
 });
